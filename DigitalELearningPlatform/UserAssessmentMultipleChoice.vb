@@ -1,0 +1,3 @@
+﻿Public Class UserAssessmentMultipleChoice
+
+End Class

@@ -12,6 +12,10 @@
     Private SettingsHoverImage As Image = Image.FromFile("C:\Users\User\source\repos\DigitalELearningPlatform\DigitalELearningPlatform\Resources\HoveredIcon\SettingsIcon-Hovered.png")
     Private LogOutOriginalImage As Image = Image.FromFile("C:\Users\User\source\repos\DigitalELearningPlatform\DigitalELearningPlatform\Resources\NormalIcon\LogOutIcon.png")
     Private LogOutHoverImage As Image = Image.FromFile("C:\Users\User\source\repos\DigitalELearningPlatform\DigitalELearningPlatform\Resources\HoveredIcon\LogOutIcon-Hovered.png")
+
+
+    ' ------ Menu Function ----------------------------------------------------------------------------------------------------------------------
+    ' ------ Menu Hover Function ----------------------------------------------------------------------------------------------------------------------
     Private Sub DashboardIcon_MouseEnter(sender As Object, e As EventArgs) Handles DashboardIcon.MouseEnter
         DashboardIcon.BackgroundImage = DashboardHoverImage
     End Sub
@@ -55,37 +59,35 @@
     Private Sub LogOutIcon_MouseLeave(sender As Object, e As EventArgs) Handles LogOutIcon.MouseLeave
         LogOutIcon.BackgroundImage = LogOutOriginalImage
     End Sub
-
+    ' ---- Menu Event Function --------------------------------------------------------------------------------------------------------------------------
     Private Sub CoursesIcon_MouseClick(sender As Object, e As MouseEventArgs) Handles CoursesIcon.MouseClick
-        DashboardPanel.Hide()
-        UserCoursesPanel.Show()
+        Me.Hide()
+        UserCourses.Show()
     End Sub
-
     Private Sub DashboardIcon_MouseClick(sender As Object, e As MouseEventArgs) Handles DashboardIcon.MouseClick
         DashboardPanel.Show()
-        UserCoursesPanel.Hide()
+        UserCourses.Hide()
     End Sub
 
     Private Sub AssessmentIcon_MouseClick(sender As Object, e As MouseEventArgs) Handles AssessmentIcon.MouseClick
-        DashboardPanel.Hide()
-        UserCoursesPanel.Hide()
+        Me.Hide()
+        UserCourses.Hide()
     End Sub
 
     Private Sub AchievementsIcon_MouseClick(sender As Object, e As MouseEventArgs) Handles AchievementsIcon.MouseClick
-        DashboardPanel.Hide()
-        UserCoursesPanel.Hide()
+        Me.Hide()
+        UserCourses.Hide()
     End Sub
 
     Private Sub SettingsIcon_MouseClick(sender As Object, e As MouseEventArgs) Handles SettingsIcon.MouseClick
-        DashboardPanel.Hide()
-        UserCoursesPanel.Hide()
+        Me.Hide()
+        UserCourses.Hide()
     End Sub
 
     Private Sub UserDashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        UserCoursesPanel.Hide()
+        UserCourses.Hide()
     End Sub
 
-    Private Sub UserCoursesPanel_Paint(sender As Object, e As PaintEventArgs) Handles UserCoursesPanel.Paint
 
-    End Sub
+
 End Class

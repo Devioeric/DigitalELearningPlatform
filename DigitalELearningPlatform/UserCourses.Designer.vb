@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class UserDashboard
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class UserCourses
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()>
+    <System.Diagnostics.DebuggerNonUserCode()> _
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,9 +20,9 @@ Partial Class UserDashboard
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()>
+    <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(UserDashboard))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(UserCourses))
         MenuPanel = New Panel()
         MenuIconPanel = New Panel()
         LogOutIcon = New Panel()
@@ -31,8 +31,8 @@ Partial Class UserDashboard
         AssessmentIcon = New Panel()
         AchievementsIcon = New Panel()
         DashboardIcon = New Panel()
-        DashboardPanel = New Panel()
         UserCoursesPanel = New Panel()
+        AddNewCoursesBtn = New Panel()
         RecentlyCompletedLabel4 = New Label()
         RecentlyCompletedLabel3 = New Label()
         RecentlyCompletedLabel2 = New Label()
@@ -76,7 +76,6 @@ Partial Class UserDashboard
         TextBoxSearch = New TextBox()
         MenuPanel.SuspendLayout()
         MenuIconPanel.SuspendLayout()
-        DashboardPanel.SuspendLayout()
         UserCoursesPanel.SuspendLayout()
         S.SuspendLayout()
         Panel9.SuspendLayout()
@@ -98,7 +97,7 @@ Partial Class UserDashboard
         MenuPanel.Location = New Point(-26, -1)
         MenuPanel.Name = "MenuPanel"
         MenuPanel.Size = New Size(97, 724)
-        MenuPanel.TabIndex = 1
+        MenuPanel.TabIndex = 2
         ' 
         ' MenuIconPanel
         ' 
@@ -174,21 +173,11 @@ Partial Class UserDashboard
         DashboardIcon.Size = New Size(34, 35)
         DashboardIcon.TabIndex = 0
         ' 
-        ' DashboardPanel
-        ' 
-        DashboardPanel.BackColor = Color.Transparent
-        DashboardPanel.BackgroundImage = My.Resources.Resources.UserDashboard
-        DashboardPanel.BackgroundImageLayout = ImageLayout.Center
-        DashboardPanel.Controls.Add(UserCoursesPanel)
-        DashboardPanel.Location = New Point(83, 12)
-        DashboardPanel.Name = "DashboardPanel"
-        DashboardPanel.Size = New Size(1179, 732)
-        DashboardPanel.TabIndex = 2
-        ' 
         ' UserCoursesPanel
         ' 
         UserCoursesPanel.BackColor = Color.Transparent
         UserCoursesPanel.BackgroundImage = CType(resources.GetObject("UserCoursesPanel.BackgroundImage"), Image)
+        UserCoursesPanel.Controls.Add(AddNewCoursesBtn)
         UserCoursesPanel.Controls.Add(RecentlyCompletedLabel4)
         UserCoursesPanel.Controls.Add(RecentlyCompletedLabel3)
         UserCoursesPanel.Controls.Add(RecentlyCompletedLabel2)
@@ -198,15 +187,25 @@ Partial Class UserDashboard
         UserCoursesPanel.Controls.Add(Hours)
         UserCoursesPanel.Controls.Add(S)
         UserCoursesPanel.Controls.Add(TextBoxSearch)
-        UserCoursesPanel.Location = New Point(0, 0)
+        UserCoursesPanel.Location = New Point(86, 12)
         UserCoursesPanel.Name = "UserCoursesPanel"
         UserCoursesPanel.Size = New Size(1173, 708)
-        UserCoursesPanel.TabIndex = 2
+        UserCoursesPanel.TabIndex = 4
+        ' 
+        ' AddNewCoursesBtn
+        ' 
+        AddNewCoursesBtn.BackgroundImage = CType(resources.GetObject("AddNewCoursesBtn.BackgroundImage"), Image)
+        AddNewCoursesBtn.BackgroundImageLayout = ImageLayout.Center
+        AddNewCoursesBtn.Cursor = Cursors.Hand
+        AddNewCoursesBtn.Location = New Point(927, 15)
+        AddNewCoursesBtn.Name = "AddNewCoursesBtn"
+        AddNewCoursesBtn.Size = New Size(234, 59)
+        AddNewCoursesBtn.TabIndex = 10
         ' 
         ' RecentlyCompletedLabel4
         ' 
         RecentlyCompletedLabel4.AutoSize = True
-        RecentlyCompletedLabel4.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0)
+        RecentlyCompletedLabel4.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         RecentlyCompletedLabel4.ForeColor = Color.White
         RecentlyCompletedLabel4.Location = New Point(826, 371)
         RecentlyCompletedLabel4.Name = "RecentlyCompletedLabel4"
@@ -217,7 +216,7 @@ Partial Class UserDashboard
         ' RecentlyCompletedLabel3
         ' 
         RecentlyCompletedLabel3.AutoSize = True
-        RecentlyCompletedLabel3.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0)
+        RecentlyCompletedLabel3.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         RecentlyCompletedLabel3.ForeColor = Color.White
         RecentlyCompletedLabel3.Location = New Point(827, 343)
         RecentlyCompletedLabel3.Name = "RecentlyCompletedLabel3"
@@ -228,7 +227,7 @@ Partial Class UserDashboard
         ' RecentlyCompletedLabel2
         ' 
         RecentlyCompletedLabel2.AutoSize = True
-        RecentlyCompletedLabel2.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0)
+        RecentlyCompletedLabel2.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         RecentlyCompletedLabel2.ForeColor = Color.White
         RecentlyCompletedLabel2.Location = New Point(827, 315)
         RecentlyCompletedLabel2.Name = "RecentlyCompletedLabel2"
@@ -239,7 +238,7 @@ Partial Class UserDashboard
         ' RecentlyCompletedLabel1
         ' 
         RecentlyCompletedLabel1.AutoSize = True
-        RecentlyCompletedLabel1.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0)
+        RecentlyCompletedLabel1.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         RecentlyCompletedLabel1.ForeColor = Color.White
         RecentlyCompletedLabel1.Location = New Point(827, 287)
         RecentlyCompletedLabel1.Name = "RecentlyCompletedLabel1"
@@ -259,7 +258,7 @@ Partial Class UserDashboard
         ' LessonsCompleted
         ' 
         LessonsCompleted.AutoSize = True
-        LessonsCompleted.Font = New Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0)
+        LessonsCompleted.Font = New Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         LessonsCompleted.Location = New Point(942, 159)
         LessonsCompleted.Name = "LessonsCompleted"
         LessonsCompleted.Size = New Size(28, 32)
@@ -269,7 +268,7 @@ Partial Class UserDashboard
         ' Hours
         ' 
         Hours.AutoSize = True
-        Hours.Font = New Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0)
+        Hours.Font = New Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Hours.Location = New Point(807, 159)
         Hours.Name = "Hours"
         Hours.Size = New Size(28, 32)
@@ -305,7 +304,7 @@ Partial Class UserDashboard
         ' Label17
         ' 
         Label17.AutoSize = True
-        Label17.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label17.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label17.Location = New Point(221, 93)
         Label17.Name = "Label17"
         Label17.Size = New Size(36, 15)
@@ -326,7 +325,7 @@ Partial Class UserDashboard
         ' Label18
         ' 
         Label18.AutoSize = True
-        Label18.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label18.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label18.Location = New Point(110, 3)
         Label18.Name = "Label18"
         Label18.Size = New Size(36, 15)
@@ -336,7 +335,7 @@ Partial Class UserDashboard
         ' Label19
         ' 
         Label19.AutoSize = True
-        Label19.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label19.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label19.Location = New Point(23, 3)
         Label19.Name = "Label19"
         Label19.Size = New Size(36, 15)
@@ -346,7 +345,7 @@ Partial Class UserDashboard
         ' Label20
         ' 
         Label20.AutoSize = True
-        Label20.Font = New Font("Segoe UI Semibold", 8.4F, FontStyle.Bold, GraphicsUnit.Point, 0)
+        Label20.Font = New Font("Segoe UI Semibold", 8.4F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label20.ForeColor = Color.White
         Label20.Location = New Point(638, 89)
         Label20.Name = "Label20"
@@ -357,7 +356,7 @@ Partial Class UserDashboard
         ' Label21
         ' 
         Label21.AutoSize = True
-        Label21.Font = New Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point, 0)
+        Label21.Font = New Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label21.Location = New Point(24, 44)
         Label21.Name = "Label21"
         Label21.Size = New Size(300, 25)
@@ -367,7 +366,7 @@ Partial Class UserDashboard
         ' Label22
         ' 
         Label22.AutoSize = True
-        Label22.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label22.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label22.Location = New Point(25, 18)
         Label22.Name = "Label22"
         Label22.Size = New Size(125, 21)
@@ -391,7 +390,7 @@ Partial Class UserDashboard
         ' Label11
         ' 
         Label11.AutoSize = True
-        Label11.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label11.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label11.Location = New Point(221, 93)
         Label11.Name = "Label11"
         Label11.Size = New Size(36, 15)
@@ -412,7 +411,7 @@ Partial Class UserDashboard
         ' Label12
         ' 
         Label12.AutoSize = True
-        Label12.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label12.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label12.Location = New Point(110, 3)
         Label12.Name = "Label12"
         Label12.Size = New Size(36, 15)
@@ -422,7 +421,7 @@ Partial Class UserDashboard
         ' Label13
         ' 
         Label13.AutoSize = True
-        Label13.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label13.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label13.Location = New Point(23, 3)
         Label13.Name = "Label13"
         Label13.Size = New Size(36, 15)
@@ -432,7 +431,7 @@ Partial Class UserDashboard
         ' Label14
         ' 
         Label14.AutoSize = True
-        Label14.Font = New Font("Segoe UI Semibold", 8.4F, FontStyle.Bold, GraphicsUnit.Point, 0)
+        Label14.Font = New Font("Segoe UI Semibold", 8.4F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label14.ForeColor = Color.White
         Label14.Location = New Point(638, 89)
         Label14.Name = "Label14"
@@ -443,7 +442,7 @@ Partial Class UserDashboard
         ' Label15
         ' 
         Label15.AutoSize = True
-        Label15.Font = New Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point, 0)
+        Label15.Font = New Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label15.Location = New Point(24, 44)
         Label15.Name = "Label15"
         Label15.Size = New Size(300, 25)
@@ -453,7 +452,7 @@ Partial Class UserDashboard
         ' Label16
         ' 
         Label16.AutoSize = True
-        Label16.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label16.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label16.Location = New Point(25, 18)
         Label16.Name = "Label16"
         Label16.Size = New Size(125, 21)
@@ -477,7 +476,7 @@ Partial Class UserDashboard
         ' Label5
         ' 
         Label5.AutoSize = True
-        Label5.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label5.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label5.Location = New Point(221, 93)
         Label5.Name = "Label5"
         Label5.Size = New Size(36, 15)
@@ -498,7 +497,7 @@ Partial Class UserDashboard
         ' Label6
         ' 
         Label6.AutoSize = True
-        Label6.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label6.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label6.Location = New Point(110, 3)
         Label6.Name = "Label6"
         Label6.Size = New Size(36, 15)
@@ -508,7 +507,7 @@ Partial Class UserDashboard
         ' Label7
         ' 
         Label7.AutoSize = True
-        Label7.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label7.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label7.Location = New Point(23, 3)
         Label7.Name = "Label7"
         Label7.Size = New Size(36, 15)
@@ -518,7 +517,7 @@ Partial Class UserDashboard
         ' Label8
         ' 
         Label8.AutoSize = True
-        Label8.Font = New Font("Segoe UI Semibold", 8.4F, FontStyle.Bold, GraphicsUnit.Point, 0)
+        Label8.Font = New Font("Segoe UI Semibold", 8.4F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label8.ForeColor = Color.White
         Label8.Location = New Point(638, 89)
         Label8.Name = "Label8"
@@ -529,7 +528,7 @@ Partial Class UserDashboard
         ' Label9
         ' 
         Label9.AutoSize = True
-        Label9.Font = New Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point, 0)
+        Label9.Font = New Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label9.Location = New Point(24, 44)
         Label9.Name = "Label9"
         Label9.Size = New Size(300, 25)
@@ -539,7 +538,7 @@ Partial Class UserDashboard
         ' Label10
         ' 
         Label10.AutoSize = True
-        Label10.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label10.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label10.Location = New Point(25, 18)
         Label10.Name = "Label10"
         Label10.Size = New Size(125, 21)
@@ -563,7 +562,7 @@ Partial Class UserDashboard
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label4.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label4.Location = New Point(221, 93)
         Label4.Name = "Label4"
         Label4.Size = New Size(36, 15)
@@ -584,7 +583,7 @@ Partial Class UserDashboard
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label3.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label3.Location = New Point(110, 3)
         Label3.Name = "Label3"
         Label3.Size = New Size(36, 15)
@@ -594,7 +593,7 @@ Partial Class UserDashboard
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label2.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label2.Location = New Point(23, 3)
         Label2.Name = "Label2"
         Label2.Size = New Size(36, 15)
@@ -604,7 +603,7 @@ Partial Class UserDashboard
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI Semibold", 8.4F, FontStyle.Bold, GraphicsUnit.Point, 0)
+        Label1.Font = New Font("Segoe UI Semibold", 8.4F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.White
         Label1.Location = New Point(638, 89)
         Label1.Name = "Label1"
@@ -615,7 +614,7 @@ Partial Class UserDashboard
         ' LessonName
         ' 
         LessonName.AutoSize = True
-        LessonName.Font = New Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point, 0)
+        LessonName.Font = New Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         LessonName.Location = New Point(24, 44)
         LessonName.Name = "LessonName"
         LessonName.Size = New Size(300, 25)
@@ -625,7 +624,7 @@ Partial Class UserDashboard
         ' CourseName
         ' 
         CourseName.AutoSize = True
-        CourseName.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        CourseName.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         CourseName.Location = New Point(25, 18)
         CourseName.Name = "CourseName"
         CourseName.Size = New Size(125, 21)
@@ -641,20 +640,18 @@ Partial Class UserDashboard
         TextBoxSearch.Size = New Size(317, 16)
         TextBoxSearch.TabIndex = 0
         ' 
-        ' UserDashboard
+        ' UserCourses
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        BackgroundImage = My.Resources.Resources.InterfaceBG
-        BackgroundImageLayout = ImageLayout.Center
         ClientSize = New Size(1280, 720)
-        Controls.Add(DashboardPanel)
+        Controls.Add(UserCoursesPanel)
         Controls.Add(MenuPanel)
-        Name = "UserDashboard"
-        Text = "UserDashboard"
+        Name = "UserCourses"
+        StartPosition = FormStartPosition.CenterParent
+        Text = "UserCourses"
         MenuPanel.ResumeLayout(False)
         MenuIconPanel.ResumeLayout(False)
-        DashboardPanel.ResumeLayout(False)
         UserCoursesPanel.ResumeLayout(False)
         UserCoursesPanel.PerformLayout()
         S.ResumeLayout(False)
@@ -676,16 +673,17 @@ Partial Class UserDashboard
         Panel7.PerformLayout()
         ResumeLayout(False)
     End Sub
+
     Friend WithEvents MenuPanel As Panel
-    Friend WithEvents DashboardPanel As Panel
     Friend WithEvents MenuIconPanel As Panel
-    Friend WithEvents AchievementsIcon As Panel
-    Friend WithEvents AssessmentIcon As Panel
-    Friend WithEvents CoursesIcon As Panel
     Friend WithEvents LogOutIcon As Panel
     Friend WithEvents SettingsIcon As Panel
+    Friend WithEvents CoursesIcon As Panel
+    Friend WithEvents AssessmentIcon As Panel
+    Friend WithEvents AchievementsIcon As Panel
     Friend WithEvents DashboardIcon As Panel
     Friend WithEvents UserCoursesPanel As Panel
+    Friend WithEvents AddNewCoursesBtn As Panel
     Friend WithEvents RecentlyCompletedLabel4 As Label
     Friend WithEvents RecentlyCompletedLabel3 As Label
     Friend WithEvents RecentlyCompletedLabel2 As Label
